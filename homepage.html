@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Transavia | Verhalen</title>
+    <link rel="stylesheet" href="main.css">
+
+</head>
+
+<body>
+
+    <header>
+        <a href="homepage.html"><img src="icon/logo.transavia.png" alt="homepage"></a>
+        <nav>
+            <a href="favorieten.html"><img src="icon/favorieten-5stuks-04.png" alt="favorieten"> </a>
+            <a href="downloads.html"><img src="icon/downloads2.png" alt="mijn downloads"></a>
+            <a href="inlog.html"><img src="icon/inloggen.png" alt="Account"></a>
+        </nav>
+
+    </header>
+
+    <h1>Verhalen website transavia</h1>
+
+    <section id="search">
+        <input class="search" type="search" placeholder="Zoek een verhaal">
+        <button type="submit" value="zoeken">Zoeken</button>
+    </section>
+
+
+    <img class="filter filterButton" src="icon/filterbutton.png" alt="filter button">
+
+    <!--html pagina maken op de zoekresultaten de fake-->
+    <form class="filter-container" action="zoek.resultaten.html">
+        <fieldset>
+            <legend class="filter">Filteren en Sorteren</legend>
+            <section>
+                <fieldset>
+                    <legend>Kies u genre:</legend>
+                    <label>
+                        <input type="checkbox"> Romans (18)
+                    </label>
+                    <label>
+                        <input type="checkbox"> Detective (15)
+                    </label>
+                    <label>
+                        <input type="checkbox"> Thrillers (12)
+                    </label>
+                    <label>
+                        <input type="checkbox"> Humor (17)
+                    </label>
+                    <label>
+                        <input type="checkbox"> Fantasy (21)
+                    </label>
+                    <label>
+                        <input type="checkbox"> Klassieker (13)
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Sorteren op:</legend>
+                    <label>
+                        <input type="radio"> Populariteit
+                    </label>
+                    <label>
+                        <input type="radio"> Datum
+                    </label>
+                    <label>
+                        <input type="radio"> Meeste downloads
+                    </label>
+                    <label>
+                        <input type="radio"> Meeste reacties
+                    </label>
+                    <br><br>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Leestijd</legend>
+                    <input type="range" name="leestijd" min="0" max="30">
+                </fieldset>
+
+            </section>
+
+            <fieldset>
+                <button> Toon zoekresultaten</button>
+            </fieldset>
+
+        </fieldset>
+    </form>
+
+    <section>
+        <h2>Lees verder</h2>
+        <section>
+            <article>
+                <h3>Eric Lucassen</h3> 
+                <a href="verhaalEric.html"> <img class="verhaal eric lucassen" src="icon/EricLucassen_Pagina_1.png" alt="verhaal Eric Lucassen"></a> 
+            </article>
+            <article>
+               <h3>Heroisch</h3>
+                <a href="verhaalHeroisch.html"> <img class="verhaal heroisch" src="icon/Heroischvers.png" alt="verhaal Heroisch vers"></a>
+            </article>
+            <article>
+               <h3>Regenboog</h3>
+                <a href="verhaalRegenboog.html"> <img class="verhaal regenboog" src="icon/regenboog.png" alt="verhaal Heroisch vers"></a>
+            </article>
+        </section>
+    </section>
+
+    <section>
+        <h2>Aanbevolen verhalen</h2>
+        <section>
+            <article>
+                <a href="verhaalBoers.html"><img class="verhaal" src="icon/boers-small.png" alt="verhaal boers"></a>
+                <p>86. Boers</p>
+                <p>Leestijd 20 minuten</p>
+                <p> Reacties (30) </p>
+                <footer>
+                    <em>Max J. Molovich</em>
+                    <section>
+                        <button class="downloaden download-button"><img class="download-icon" src="icon/downloaden.svg" alt="download button"> </button>
+                        <button class="like like-button"><img class="heart" src="icon/heart-empty.svg" alt="like button"></button>
+                    </section>
+                </footer>
+            </article>
+            <article>
+                <a href="verhaalHardboiled.html"><img class="verhaal" src="icon/Hardboiled.png" alt="verhaal Hardboiled"></a>
+                <p>6. Hardboiled</p>
+                <p>Leestijd 6 minuten</p>
+                <p> Reacties (19) </p>
+                <footer>
+                    <em>Max J. Molovich</em>
+                    <section>
+                        <button class="downloaden download-button"><img class="download-icon" src="icon/downloaden.svg" alt="download button"> </button>
+                        <button class="like like-button"><img class="heart" src="icon/heart-empty.svg" alt="like button"></button>
+                    </section>
+                </footer>
+            </article>
+            <article>
+                <a href="presentator"><img class="verhaal" src="icon/maarten.jpeg" alt="verhaal Presentator die ten onrechte denkt aansluiting te hebben gevonden bij 'de kids'"></a>
+                <p>85. Presentator die ten onrechte denkt aansluiting te hebben gevonden bij 'de kids'</p>
+                <p>Leestijd 17 minuten</p>
+                <p> Reacties (28) </p>
+                <footer>
+                    <em>Max J. Molovich</em>
+                    <section>
+                        <button class="downloaden download-button"><img class="download-icon" src="icon/downloaden.svg" alt="download button"> </button>
+                        <button class="like like-button"><img class="heart" src="icon/heart-empty.svg" alt="like button"></button>
+                    </section>
+                </footer>
+            </article>
+            <article>
+                <a href="verhaalEssentie.html"><img class="verhaal" src="icon/ESSENTIE.Elyse.png" alt="verhaal Essentie"> </a>
+                <p>2. Essentie</p>
+                <p>Leestijd 1 minuten</p>
+                <p> Reacties (18) </p>
+                <footer>
+                    <em>Max J. Molovich</em>
+                    <section>
+                        <button class="downloaden download-button"><img class="download-icon" src="icon/downloaden.svg" alt="download button"> </button>
+                        <button class="like like-button"><img class="heart" src="icon/heart-empty.svg" alt="like button"></button>
+                    </section>
+                </footer>
+            </article>
+            <article>
+                <a href="verhaalDroom.html"><img class="verhaal" src="icon/verhaaldroom.jpg" alt="verhaal droom"> </a>
+                <p>3. Droom</p>
+                <p>Leestijd 4 minuten</p>
+                <p> Reacties (38) </p>
+                <footer>
+                    <em>Max J. Molovich</em>
+                    <section>
+                        <button class="downloaden download-button"><img class="download-icon" src="icon/downloaden.svg" alt="download button"> </button>
+                        <button class="like like-button"><img class="heart" src="icon/heart-empty.svg" alt="like button"></button>
+                    </section>
+                </footer>
+            </article>
+            <article>
+                <a href="verhaalPoepen.html"><img class="verhaal" src="icon/verhaalpoepen.jpg" alt="verhaal poepen"> </a>
+                <p>39. Poepen</p>
+                <p>Leestijd 8 minuten</p>
+                <p> Reacties (53) </p>
+                <footer>
+                    <em>Max J. Molovich</em>
+                    <section>
+                        <button class="downloaden download-button"><img class="download-icon" src="icon/downloaden.svg" alt="download button"> </button>
+                        <button class="like like-button"><img class="heart" src="icon/heart-empty.svg" alt="like button"></button>
+                    </section>
+                </footer>
+            </article>
+        </section>
+    </section>
+
+    <div class="feedbackFavorieten">
+        <img class="heartFeedback" src="icon/heart-filled.svg" alt="feedback like">
+        <p>Dit verhaal is toegevoegd aan je favorieten.</p>
+    </div>
+
+    <div class="feedbackDownloaden">
+        <img class="downloadFeedback" src="icon/downloaden.svg" alt="feedback downloaden">
+        <p>Het downloaden van dit verhaal is voltooid.</p>
+    </div>
+
+    <script src="homepage.js"></script>
+
+</body>
