@@ -2,16 +2,20 @@
     font-family: 'Nexa Light';
     src: url('fonts/NexaLight.otf');
     /* IE9 Compat Modes */
-    src: url('fonts/NexaLight.otf') format('otf'), /* Super Modern Browsers */
-    url('fonts/NexaLight.otf') format('otf'), /* Pretty Modern Browsers */
+    src: url('fonts/NexaLight.otf') format('otf'),
+        /* Super Modern Browsers */
+        url('fonts/NexaLight.otf') format('otf'),
+        /* Pretty Modern Browsers */
 }
 
 @font-face {
     font-family: 'Nexa Bold';
     src: url('fonts/NexaBold.otf');
     /* IE9 Compat Modes */
-    src: url('fonts/NexaBold.otf') format('otf'), /* Super Modern Browsers */
-    url('fonts/NexaBold.otf') format('otf'), /* Pretty Modern Browsers */
+    src: url('fonts/NexaBold.otf') format('otf'),
+        /* Super Modern Browsers */
+        url('fonts/NexaBold.otf') format('otf'),
+        /* Pretty Modern Browsers */
 }
 
 body.background {
@@ -20,6 +24,7 @@ body.background {
     font-family: 'nexa bold', sans-serif;
     font-size: 1em;
     margin: 0em;
+    margin-top: 5em;
 }
 
 body {
@@ -30,18 +35,29 @@ body {
     Background-attachment: fixed;
     font-family: 'nexa bold', sans-serif;
     font-size: 1em;
-    margin: 0em;
+    margin: 0;
+    margin-top: 5em;
 }
 
 header {
-    //position: fixed;
+    position: fixed;
+    top: 0;
     width: 100%;
     background-color: #ffffff;
     box-shadow: 0 0.3125em 0.625em 0 rgba(0, 0, 0, .15);
-    padding-top: 0.2em;
+    padding-top: 0.4em;
     padding-bottom: 0.2em;
     display: flex;
     justify-content: space-between;
+}
+header img{
+    width: 3em;
+}
+
+header img:hover{
+    opacity: 0.8;
+    transition: 0.1s;
+    height: 3.2em;
 }
 
 nav {
@@ -49,12 +65,48 @@ nav {
     display: flex;
 }
 
-img:first-of-type {
+nav a{
+  position: relative;
+}
+
+nav img {
     width: auto;
-    height: 2.5em;
+    height: 3em;
     margin-right: 0.5em;
     display: flex;
     justify-content: space-between;
+}
+ 
+.plus{
+  position: absolute;
+  top: -4px;
+  right: 0;
+  width: auto;
+  background-color: #ff3368;
+  color: #fff;
+  text-align: center;
+  border-radius: 100;
+  margin-top: 0;
+  padding-top: 0;
+  padding: .2em .5em ;
+  transition: 2s;
+  display: none;
+}
+
+.d-plus{
+  position: absolute;
+  top: -4px;
+  right: 0;
+  width: auto;
+  background-color: #28009f;
+  color: #fff;
+  text-align: center;
+  border-radius: 100;
+  margin-top: 0;
+  padding-top: 0;
+  padding: .2em .5em ;
+  transition: 2s;
+  display: none;
 }
 
 button[type=submit] {
@@ -76,7 +128,7 @@ button[type=submit] {
 input[type=search] {
     display: inline-grid;
     justify-content: flex-start;
-    color: #333399;
+    color: white;
     background-color: #00c66d;
     border-radius: 1em;
     margin-left: 1em;
@@ -88,6 +140,10 @@ input[type=search] {
     transition: 2s;
     text-align: center;
     box-shadow: 2px 2px #00935e;
+}
+
+::placeholder {
+    color: white;
 }
 
 input[type=text] {
@@ -124,6 +180,10 @@ input:focus {
     transition: 1s;
     margin-left: auto;
     margin-right: auto;
+}
+
+input[type=search]:hover {
+    width: 100%;
 }
 
 input[type=text]:hover {
@@ -180,12 +240,25 @@ img.filterButton {
     height: 2em;
 }
 
+img.filterButton:hover {
+    opacity: 0.6;
+    transition: 0.2s;
+    width: 4.2em;
+}
+
 img.gif {
     width: 90%;
     height: 100%;
     margin-left: auto;
     margin-right: auto;
     transition: 2s;
+}
+
+img.minuten{
+    width: 17em;
+    height: 2em;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 h1 {
@@ -285,12 +358,14 @@ button {
     box-shadow: 2px 2px #da004d;
 }
 
+
 button.like {
     align-items: flex-start;
     background-color: #ff3368;
     box-shadow: 2px 2px #da004d;
     width: 5em;
-    border-radius: 0.5em;
+    height: 2em;
+    border-radius: 1em;
     padding: 0.1em;
     margin-left: 0.2em;
     margin-right: 0.2em;
@@ -301,7 +376,8 @@ button.downloaden {
     background-color: #28009f;
     box-shadow: 2px 2px #180048;
     width: 5em;
-    border-radius: 0.5em;
+    height: 2em;
+    border-radius: 1em;
     padding: 0.1em;
     margin-left: 0.2em;
     margin-right: 0.2em;
@@ -309,16 +385,18 @@ button.downloaden {
 
 img.leesbalk {
     position: sticky;
-    top: 0;
+    top: 3em;
     padding: 8px;
-    left: 1.5em;
-    font-size: 16px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20em;
 }
 
 img.heart {
     position: inherit;
     align-items: center;
-    height: 1.em;
+    height: 1.8em;
     margin-left: auto;
     margin-right: auto;
 }
@@ -326,7 +404,7 @@ img.heart {
 img.download-icon {
     position: inherit;
     align-items: center;
-    height: 1.em;
+    height: 1.8em;
     margin-left: auto;
     margin-right: auto;
 }
@@ -340,7 +418,6 @@ p {
     font-family: 'nexa light', sans-serif;
     font-size: 1em;
     display: block;
-    margin-left: 1.5em;
     margin-right: 2em;
 }
 
@@ -365,7 +442,7 @@ div {
 }
 
 /* de class die ervoor zorgt dat de feedback buitenbeeld is */
-div.feedbackDownloaden{
+div.feedbackDownloaden {
     width: 15em;
     height: 6em;
     background-color: #2800A0;
@@ -376,7 +453,7 @@ div.feedbackDownloaden{
 }
 
 /* de class die ervoor zorgt dat de feedback buitenbeeld is */
-div.feedbackFavorieten{
+div.feedbackFavorieten {
     width: 15em;
     height: 6em;
     background-color: #ff3368;
@@ -387,31 +464,32 @@ div.feedbackFavorieten{
 }
 
 /* deze class zorgt ervoor dat de div in beeld verschijnt */
-div.feedback{
+div.feedback {
     bottom: 1em;
 }
 
-div.feedbackDownloaden p{
+div.feedbackDownloaden p {
     color: white;
     font-size: 1em;
     margin-top: 1em;
 }
 
-div.feedbackFavorieten p{
+div.feedbackFavorieten p {
     color: white;
     font-size: 1em;
     margin-top: 1em;
 }
 
-img.heartFeedback{
+img.heartFeedback {
     margin-left: 1.5em;
     margin-top: 1.5em;
 }
 
-img.downloadFeedback{
+img.downloadFeedback {
     margin-left: 1.5em;
     margin-top: 1.5em;
-}}
+}
+}
 
 section section:first-of-type {
     display: grid;
@@ -439,7 +517,7 @@ article {
 footer {
     font-size: 1em;
     display: block;
-    margin-left: 1.5em;
+    margin-left: 1em;
     margin-right: 2em;
     padding-top: 0.5em;
     transition: 2s;
@@ -447,7 +525,7 @@ footer {
 
 img.verhaal {
     border: 0.1em solid //#000;
-    width: 95%;
+        width: 95%;
     max-width: 20em;
     height: auto;
     max-height: 15em;
@@ -494,7 +572,7 @@ img.verhaal {
 
     img.verhaal {
         border: 0.1em solid //#000;
-        width: 95%;
+            width: 95%;
         max-width: 20em;
         height: auto;
         max-height: 15em;
@@ -508,17 +586,68 @@ img.verhaal {
     img.gif {
         width: 85%;
         height: 100%;
+        display: block;
         margin-left: auto;
         margin-right: auto;
         transition: 2s;
     }
-    
+
+    img.minuten{
+    width: 9em;
+    height: 2em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+    button.like {
+        align-items: flex-start;
+        background-color: #ff3368;
+        box-shadow: 2px 2px #da004d;
+        width: 5em;
+        height: 2em;
+        border-radius: 1em;
+        padding: 0.1em;
+        margin-left: 0.2em;
+        margin-right: 0.2em;
+    }
+
+    button.downloaden {
+        align-items: flex-start;
+        background-color: #28009f;
+        box-shadow: 2px 2px #180048;
+        width: 5em;
+        height: 2em;
+        border-radius: 1em;
+        padding: 0.1em;
+        margin-left: 0.2em;
+        margin-right: 0.2em;
+    }
+
+    img.heart {
+        position: inherit;
+        align-items: center;
+        height: 1.5em;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    img.download-icon {
+        position: inherit;
+        align-items: center;
+        height: 1.5em;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     img.leesbalk {
     position: sticky;
-    top: 0;
-    padding: 10px;
-    left: 5.9em;
-    font-size: 20px;
+    top: 3.3em;
+    padding: 8px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 35em;
+        height: 4em;
 }
 
     input[type=search] {
@@ -609,7 +738,7 @@ img.verhaal {
 
     img.verhaal {
         border: 0.1em solid //#000;
-        width: 95%;
+            width: 95%;
         max-width: 20em;
         height: auto;
         max-height: 15em;
@@ -623,19 +752,69 @@ img.verhaal {
     img.gif {
         width: 80%;
         height: 100%;
+        display: block;
         margin-left: auto;
         margin-right: auto;
         transition: 2s;
     }
-    
+
+    img.minuten{
+    width: 11em;
+    height: 2em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
     img.leesbalk {
     position: sticky;
-    top: 0;
-    padding: 10px;
-    left: 11em;
-    font-size: 30px;
-        
+    top: 3.3em;
+    padding: 8px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 55em;
+        height: 5em;
 }
+
+    button.like {
+        align-items: flex-start;
+        background-color: #ff3368;
+        box-shadow: 2px 2px #da004d;
+        width: 5.2em;
+        height: 2.2em;
+        border-radius: 1em;
+        padding: 0.1em;
+        margin-left: 0.2em;
+        margin-right: 0.2em;
+    }
+
+    button.downloaden {
+        align-items: flex-start;
+        background-color: #28009f;
+        box-shadow: 2px 2px #180048;
+        width: 5.2em;
+        height: 2.2em;
+        border-radius: 1em;
+        padding: 0.1em;
+        margin-left: 0.2em;
+        margin-right: 0.2em;
+    }
+
+    img.heart {
+        position: inherit;
+        align-items: center;
+        height: 1.8em;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    img.download-icon {
+        position: inherit;
+        align-items: center;
+        height: 1.8em;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
     input[type=search] {
         width: 86%;

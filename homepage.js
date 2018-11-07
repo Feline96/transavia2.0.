@@ -1,5 +1,10 @@
-var filterButton = document.querySelector('.filterButton');
-var filterContainer = document.querySelector('.filter-container');
+/*jslint browser: true, devel: true, eqeq: true, plusplus: true, sloppy: true, vars: true, white: true/
+/eslint-env browser/
+/eslint 'no-console':0*/
+
+
+var filterButton=document.querySelector('.filterButton');
+var filterContainer=document.querySelector('.filter-container');
 // maakt twee variabelen van van de button en de container waar het filter in zit.
 
 //console.log(test);
@@ -15,15 +20,17 @@ filterButton.addEventListener('click', openFilter);
 
 
 //maakt twee variabelen voor de likebutton en de img waarvan de src veranderd gaat worden
-var likeButton =  document.querySelector('.like-button');
+var likeButton = document.querySelector('.like-button');
 var heartImg = document.querySelector('.heart');
 var feedbackLike = document.querySelector('.feedbackFavorieten');
+var plusOne =  document.querySelector('.plus');
 
 function likeStory(){
   //met "heartImg.src" is het mogelijk de src te veranderen van heartImg
   // wat nu gebeurt op click
     heartImg.src = "icon/heart-filled.svg";
     feedbackLike.classList.add('feedback');
+    plusOne.classList.add('active');
     setTimeout(function(){ feedbackLike.classList.remove('feedback'); }, 5000);
 }
 
@@ -40,6 +47,7 @@ likeButton.addEventListener("click", likeStory)
 var downloadButton = document.querySelector('.download-button');
 var downloadImg = document.querySelector('.download-icon');
 var feedbackDownload = document.querySelector('.feedbackDownloaden');
+var downPlus = document.querySelector('.d-plus');
 
 function downloading() {
   // veranderd de downloading src in de laad gif
@@ -50,13 +58,15 @@ function downloading() {
   setTimeout(function(){
     downloadImg.src = "icon/checked.svg";
       feedbackDownload.classList.add('feedback');
-      
-    setTimeout(function(){ 
+        downPlus.classList.add('active');
+
+    setTimeout(function(){
         feedbackDownload.classList.remove('feedback');
+
     },5000);
-      
+
 }, 3000);
 }
 
 // koppeld de functie downloading aan de downloadbutton bij het klikken erop.
-downloadButton.addEventListener("click", downloading) 
+downloadButton.addEventListener("click", downloading)
